@@ -13,4 +13,5 @@ docker run --rm \
    -v $proj_home:/usr/src/mymaven \
    -w /usr/src/mymaven $img_mvn mvn clean package -U
 
-mv $proj_home/seepexi-services-provider/target/seepexi-services-provider-*.jar $proj_home/seepexi-services-provider/target/demo.jar
+mv $proj_home/tess-provider/target/tess-provider-*.jar $proj_home/tess-provider/target/demo.jar
+cp $m2_cache/repository/com/taobao/pandora/taobao-hsf.sar/dev-SNAPSHOT/taobao-hsf.sar-dev-SNAPSHOT.jar $proj_home/tess-provider/target/taobao-hsf.sar-dev-SNAPSHOT.jar
