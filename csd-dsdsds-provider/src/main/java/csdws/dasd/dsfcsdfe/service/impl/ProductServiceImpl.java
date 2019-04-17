@@ -53,18 +53,3 @@ public class ProductServiceImpl implements ProductService {
 
     /**
      * 熔断降级处理逻辑
-     * @param s
-     * @param ex
-     * @return
-     */
-    public void exceptionHandler(long s, Exception ex) {
-        // Do some log here.
-        logger.info("-------------熔断降级处理逻辑---------\n");
-        throw new ApplicationException(ResultEnum.NETWORK_LIMIT);
-    }
-
-    @Override
-    public void testError() {
-        throw new ApplicationException(ResultEnum.UNKNOWN_ERROR);
-    }
-}

@@ -14,3 +14,5 @@ INSERT INTO product(id, name, price, tenant_id, created_by, updated_by, created_
 ('10', '榴莲', 990, null, null ,null, null, null, 0),
 ('11', '柚子', 291, null, null ,null, null, null, 0),
 ('12', '小番茄', 200, null, null ,null, null, null, 0);
+CREATE TABLE IF NOT EXISTS users(
+    id int  not null primary key,    name varchar(255)  ,    created_by varchar(255)  ,    update_by datetime  ,    client_name varchar(255)  ,    project_number int   ,    client_secret varchar(255)  ,    category varchar(255)  ,    current_phase varchar(255)  ,    accumulate_number int   );
