@@ -1,11 +1,26 @@
+# Description
 
 
-本地安装轻量级配置中心，参考[官方文档](https://helpcdn.aliyun.com/document_detail/44163.html)：
+[Eureka](https://github.com/Netflix/eureka)
 
 
+[Apollo](https://github.com/ctripcorp/apollo)
 
-run:IDE内右键运行StartupApplication类，启动程序。
+
+[Sentinel](https://github.com/alibaba/Sentinel)
 
 
-* [Introduction to HSF Archetypes](http://donhac.vip/hsf-archetype-docs/#/)
-* [Aliyun docs](https://helpcdn.aliyun.com/document_detail/85329.html)
+[HikariCP](https://github.com/brettwooldridge/HikariCP)
+
+
+[Mybatis-Plus](https://github.com/baomidou/mybatis-plus)
+
+
+[Feign](https://github.com/OpenFeign/feign)
+
+
+- sentine 控制台
+- swagger & yapi接口文档集成
+- 使用说明文档
+
+

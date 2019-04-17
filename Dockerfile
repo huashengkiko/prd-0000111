@@ -3,5 +3,4 @@ FROM fabric8/java-jboss-openjdk8-jdk
 
 USER root
 
-# Prepare by downloading dependencies
-COPY tess-provider/target/demo.jar tess-provider/target/taobao-hsf.sar-dev-SNAPSHOT.jar /home/
+COPY csd-dsdsds-provider/target/demo.jar /home/
