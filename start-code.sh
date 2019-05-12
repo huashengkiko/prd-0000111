@@ -4,7 +4,7 @@ cd `dirname $0`
 img_mvn="maven:3.3.3-jdk-8"                 # docker image of maven
 m2_cache=~/.m2                              # the local maven cache dir
 proj_home=$PWD                              # the project root dir
-img_output="deepexi/csd-dsdsds"      # output image tag
+img_output="deepexi/seepexi-services"      # output image tag
 
 git pull  # should use git clone https://name:pwd@xxx.git
 
@@ -14,14 +14,14 @@ docker run --rm \
    -v $proj_home:/usr/src/mymaven \
    -w /usr/src/mymaven $img_mvn mvn clean package -U
 
-sudo mv $proj_home/csd-dsdsds-provider/target/csd-dsdsds-*.jar $proj_home/csd-dsdsds-provider/target/demo.jar # 兼容所有sh脚本
+sudo mv $proj_home/seepexi-services-provider/target/seepexi-services-*.jar $proj_home/seepexi-services-provider/target/demo.jar # 兼容所有sh脚本
 docker build -t $img_output .
 
 mkdir -p $PWD/logs
 chmod 777 $PWD/logs
 
 # 删除容器
-docker rm -f csd-dsdsds &> /dev/null
+docker rm -f seepexi-services &> /dev/null
 
 version=`date "+%Y%m%d%H"`
 
@@ -30,7 +30,7 @@ docker run -d --restart=on-failure:5 --privileged=true \
     -w /home \
     -v $PWD/logs:/home/logs \
     -p 8088:8088 \
-    --name csd-dsdsds deepexi/csd-dsdsds \
+    --name seepexi-services deepexi/seepexi-services \
     java \
         -Djava.security.egd=file:/dev/./urandom \
         -Duser.timezone=Asia/Shanghai \
@@ -44,5 +44,5 @@ docker run -d --restart=on-failure:5 --privileged=true \
         -jar /home/demo.jar \
           --spring.profiles.active=prod \
           --eureka.client.serviceUrl.defaultZone=http://admin:deepexi@127.0.0.1:8761/eureka/ \
-          --app.id=csd-dsdsds \
+          --app.id=seepexi-services \
           --apollo.meta=http://127.0.0.1:8080

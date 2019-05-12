@@ -9,14 +9,14 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>csdws.dasd</groupId>
-    <artifactId>csd-dsdsds</artifactId>
+    <groupId>com.deepexi</groupId>
+    <artifactId>seepexi-services</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>csd-dsdsds-api</module>
-        <module>csd-dsdsds-provider</module>
+        <module>seepexi-services-api</module>
+        <module>seepexi-services-provider</module>
     </modules>
 
     <repositories>

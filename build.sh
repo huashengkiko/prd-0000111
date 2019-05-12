@@ -13,4 +13,4 @@ docker run --rm \
    -v $proj_home:/usr/src/mymaven \
    -w /usr/src/mymaven $img_mvn mvn clean package -U
 
-mv $proj_home/csd-dsdsds-provider/target/csd-dsdsds-provider-*.jar $proj_home/csd-dsdsds-provider/target/demo.jar
+mv $proj_home/seepexi-services-provider/target/seepexi-services-provider-*.jar $proj_home/seepexi-services-provider/target/demo.jar

@@ -3,4 +3,4 @@ FROM fabric8/java-jboss-openjdk8-jdk
 
 USER root
 
-COPY csd-dsdsds-provider/target/demo.jar /home/
+COPY seepexi-services-provider/target/demo.jar /home/
